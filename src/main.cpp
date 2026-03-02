@@ -112,7 +112,7 @@ void updateLED() {
       
     case LED_SLOW_BLINK:
       // Slow blink: 1000ms interval
-      if (currentTime - lastBlinkTime >= 1000) {
+      if (currentTime - lastBlinkTime >= 700) {
         ledState = !ledState;
         digitalWrite(LED_PIN, ledState ? HIGH : LOW);
         lastBlinkTime = currentTime;
@@ -121,7 +121,7 @@ void updateLED() {
       
     case LED_FAST_BLINK:
       // Fast blink: 300ms interval
-      if (currentTime - lastBlinkTime >= 300) {
+      if (currentTime - lastBlinkTime >= 350) {
         ledState = !ledState;
         digitalWrite(LED_PIN, ledState ? HIGH : LOW);
         lastBlinkTime = currentTime;
@@ -130,7 +130,7 @@ void updateLED() {
       
     case LED_VERY_FAST_BLINK:
       // Very fast blink: 100ms interval (Error mode)
-      if (currentTime - lastBlinkTime >= 100) {
+      if (currentTime - lastBlinkTime >= 200) {
         ledState = !ledState;
         digitalWrite(LED_PIN, ledState ? HIGH : LOW);
         lastBlinkTime = currentTime;
